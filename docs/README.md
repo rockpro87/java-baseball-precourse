@@ -1,0 +1,40 @@
+# 기능목록
+
+- 프로그램 동작
+  - 게임 대기
+    - 게임이 종료된 후 다시 시작하거나 완전히 종료할 수 있는 상태.
+  - 게임 시작
+    - 게임 진행 단계로 넘어가는 기능
+  - 게임 완전히 종료
+    - 더 이상 게임을 하지 못하도록 완전히 종료
+  - 프로그램 종료
+- 게임 진행
+  - 서로 다른 랜덤 숫자 3개 선정
+  - 스트라이크 카운트
+    - 세자리 숫자가 같은 자리에 있을 경우 +1
+  - 볼 카운트
+    - 숫자는 같지만 다른 자리에 있을 경우 +1
+  - 낫싱 체크
+    - 같은 숫자가 하나도 없을 경우
+  - 체크 결과 출력
+- 에외처리
+  - 사용자 입력 값 유효성 검사
+    - 4자리 이상 입력할 경우
+    - 숫자 이외의 값이 들어올 경우
+    - 중복된 숫자를 입력할 경우 나올 경우
+- 제약사항
+  - JDK8에서 동작
+  - JDK Random 및 Scanner API 대신 camp.nextstep.edu.missionutils에서 제공하
+    는 Randoms 및 Console API를 사용
+    - 랜덤숫자: camp.nextstep.edu.missionutils.Randoms.pickNumberInRange() 사용
+    - 콘솔 출력: camp.nextstep.edu.missionutils.Console.readLine() 사용
+  - baseball.ApplicationTest 통과할 것
+  - 자바 코드 컨벤션을 지키기
+    - [컨벤션 정보](https://github.com/woowacourse/woowacourse-docs/tree/master/styleguide/java])
+  - indent depth 1까지만 허용
+  - stream api 사용 금지, lambda는 사용가능
+  - else 사용하지 말 것
+  - 함수 길이 10줄 넘지 않도록
+- 단위테스트
+  - 도메인 로직에 단위테스트 구현
+    - UI(System.out, System.in, Scanner)제외
