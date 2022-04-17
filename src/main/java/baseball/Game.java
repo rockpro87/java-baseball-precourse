@@ -12,8 +12,6 @@ public class Game {
 
     public Game() {
         this.answer = getRandomNumber();
-        //TODO: 임시 정답 출력 테스트 후 제거
-        //System.out.println(this.answer);
     }
 
     public boolean isAllStrike(String input) {
@@ -21,10 +19,11 @@ public class Game {
     }
 
     public String getResultMessage(String input) {
-        if (isAllStrike(input)) {
-            return String.format(Message.STRIKE, Config.ALL_STRIKE_COUNT);
+        String validInput = GameUtil.validationInput(input);
+        if (isAllStrike(validInput)) {
+            return String.format(Message.STRIKE, Config.ALL_STRIKE_COUNT).trim();
         }
-        return convertMessage(getCount(input));
+        return convertMessage(getCount(validInput));
     }
 
     private HashMap<String, Integer> getCount(String input) {
