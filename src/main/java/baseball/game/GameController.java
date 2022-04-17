@@ -1,4 +1,4 @@
-package baseball;
+package baseball.game;
 
 import baseball.config.Config;
 import baseball.config.Message;
