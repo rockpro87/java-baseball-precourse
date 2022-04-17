@@ -10,10 +10,16 @@ public class Game {
 
     public Game() {
         this.answer = getRandomNumber();
+        //TODO: 임시 정답 출력 테스트 후 제거
+        System.out.println(this.answer);
     }
 
     public String getAnswer() {
         return this.answer;
+    }
+
+    public boolean isAllStrike(String input) {
+        return this.answer.equals(input);
     }
 
     private String getRandomNumber() {

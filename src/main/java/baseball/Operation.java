@@ -7,16 +7,17 @@ import camp.nextstep.edu.missionutils.Console;
 public class Operation {
     // 게임 시작
     public static void start() {
-        Operation.progress();
+        Operation.progress(new Game());
     }
 
     // 게임 진행
-    private static void progress() {
+    private static void progress(Game game) {
         boolean allStrike = false;
+        String userInput;
         while (!allStrike) {
             System.out.print(Message.INPUT_NUMBER);
-            System.out.println(Console.readLine());
-            allStrike = true;
+            userInput = Console.readLine();
+            allStrike = game.isAllStrike(userInput);
         }
         Operation.stop();
     }

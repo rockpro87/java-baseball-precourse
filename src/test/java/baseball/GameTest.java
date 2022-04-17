@@ -23,4 +23,9 @@ class GameTest {
         HashSet<String> numSet = new HashSet<>(Arrays.asList(answer.split("")));
         assertThat(answer.length()).isEqualTo(numSet.size());
     }
+
+    @Test
+    void 모두_스트라이크일_경우_체크함수_테스트() {
+        assertThat(game.isAllStrike(answer)).isEqualTo(true);
+    }
 }
