@@ -10,6 +10,8 @@ public class Message {
     public final static String STRIKE = " %d스트라이크";
     public final static String NOTHING = "낫싱";
 
-    public final static String ERROR_INPUT_LENGTH = String.format("%d자리 숫자만 입력가능합니다.", Config.ALL_STRIKE_COUNT);
+    public final static String ERROR_INVALID_INPUT_LENGTH = String.format("%d자리 숫자만 입력가능합니다.", Config.ALL_STRIKE_COUNT);
+    public final static String ERROR_NOT_UNIQUE = "동일한 숫자는 입력불가합니다.";
+    public final static String ERROR_NOT_NUMBER = "숫자만 입력가능합니다.";
     public final static String ERROR_GAME_SIGNAL = "1 또는 2만 입력가능합니다.";
 }

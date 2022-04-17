@@ -16,7 +16,7 @@ public class GameController {
         String userInput;
         while (!allStrike) {
             System.out.print(Message.INPUT_NUMBER);
-            userInput = Console.readLine();
+            userInput = GameUtil.validationInput(Console.readLine());
             System.out.println(game.getResultMessage(userInput));
             allStrike = game.isAllStrike(userInput);
         }
