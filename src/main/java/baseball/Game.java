@@ -1,5 +1,6 @@
 package baseball;
 
+import baseball.config.Config;
 import camp.nextstep.edu.missionutils.Randoms;
 
 import java.util.LinkedHashSet;
@@ -18,7 +19,7 @@ public class Game {
     private String getRandomNumber() {
         LinkedHashSet<Integer> pickNumbers = new LinkedHashSet<>();
         StringBuilder tmpAnswer = new StringBuilder();
-        while (pickNumbers.size() < GameConfig.ALL_STRIKE_COUNT.getValue()) {
+        while (pickNumbers.size() < Config.ALL_STRIKE_COUNT) {
             pickNumbers.add(Randoms.pickNumberInRange(1, 9));
         }
         for (Integer pickNumber : pickNumbers) {
